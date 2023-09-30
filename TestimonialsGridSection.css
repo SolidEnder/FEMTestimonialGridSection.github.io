@@ -1,0 +1,157 @@
+/*Page specs*/
+* {
+	box-sizing: border-box;
+}
+html:focus-within {
+	scroll-behavior: smooth;	
+}
+/*Box specs*/
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: "Barlow Semi Condensed", sans-serif;
+	font-size: 13px;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(210, 46%, 95%);
+	padding: 20px;
+}
+/*Grid specs*/
+main {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	padding-block: 2rem;
+	width: min(95%, 70rem);
+	max-width: 1150px;
+	margin-inline: auto;
+}
+/*Box elements*/
+.testimonials {
+	display: flex;
+	flex-flow: column;
+	font-size: var(--fs-400);
+	box-shadow: 2.5rem 3.75rem 3rem;
+	border-radius: 0.5rem; 
+	padding: 30px 40px;
+	grid-column: auto;
+	grid-row: auto;
+}
+.grid-head {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+	margin-bottom: 10px;
+}
+.avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+	position: relative;
+	top: 10px;
+}
+.name {
+	font-weight: 600;
+	font-size: 15px;
+	white-space: nowrap;
+}
+.status {
+	opacity: 0.5;
+	position: relative;
+	top: 20px;
+	right: 85px;
+	white-space: nowrap;
+}
+.heading {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+.details {
+	line-height: 1.5;
+	opacity: 0.5;
+}
+.grid1 {
+	background-color: hsl(263, 55%, 52%);
+	background-image: URL("file:///C:/Users/bryan/OneDrive/Documents/TestimonialsGridSection/bg-pattern-quotation.svg");
+	background-repeat: no-repeat;
+	background-position: 80% 0;
+}
+.avatar1 {
+	border: hsl(257,48%,58%);
+}
+.grid2 {
+	background-color: hsl(217, 19%, 35%);
+}
+.avatar2 {
+	border: 2px solid lightgray;
+}
+.grid3 {
+	background-color: white;
+}
+.grid4 {
+	background-color: hsl(219, 29%, 14%);
+}
+.avatar4 {
+	border: 2px solid hsl(257,48%,58%);
+}
+.grid5 {
+	background-color: white;
+}
+.name-white, .status-white {
+	color: white;
+}
+h3.gH-white {
+	color: white;
+}
+p.gD-white {
+	color: white;
+	opacity: 0.5;
+}
+.grid-body {
+	grid-row: 1;
+	grid-column: 1;
+}
+/*Desktop properties*/
+@media (min-width: 50em) {
+	main {
+		display: grid;
+		gap: 1.5rem;
+		grid-template-columns: repeat(4, 1fr);
+		width: min(95%, 70rem);
+		margin-inline: auto;
+	}
+	
+	.testimonials {
+		font-size: var(--fs-400);
+		padding: 2rem;
+		border-radius: 2rem;
+		box-shadow: 2.5rem 3.75rem 3rem;
+		flex-direction: column;
+	}
+	
+	.grid1 {
+		grid-column: span 2;
+	}
+	
+	.grid2 {
+	 	grid-column: 3/4;    
+	}
+	
+	.grid3 {
+	   grid-row: 2/3;
+	   grid-column: 1/2;
+	}
+	
+	.grid4 {
+		grid-column: span 2;
+	}
+	
+	.grid5 {
+		grid-column: 4;
+		grid-row: 1 / span 2;
+	}
+}
