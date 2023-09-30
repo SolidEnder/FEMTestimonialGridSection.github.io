@@ -76,7 +76,7 @@ main {
 }
 .grid1 {
 	background-color: hsl(263, 55%, 52%);
-	background-image: URL("file:///C:/Users/bryan/OneDrive/Documents/TestimonialsGridSection/bg-pattern-quotation.svg");
+	background-image: URL("bg-pattern-quotation.svg");
 	background-repeat: no-repeat;
 	background-position: 80% 0;
 }
